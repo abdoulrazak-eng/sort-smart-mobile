@@ -89,8 +89,8 @@ export function estimateCo2({
   massG,
 }: {
   category: string;
-  material?: string | null;
-  massG?: number | null;
+  material?: string | null | undefined;
+  massG?: number | null | undefined;
 }): Co2Estimate {
   const allowed = CATEGORY_MATERIALS[category] || ["OTHER"];
   const fallback = CATEGORY_FALLBACK_MATERIAL[category] || "OTHER";
