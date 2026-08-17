@@ -1,0 +1,16 @@
+{
+  "name": "SmartEco AI Sorting",
+  "short_name": "SmartEco",
+  "description": "AI-powered waste sorting: point your camera at any item and SmartEco tells you which bin it belongs in, then tracks the CO2e you avoid.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
