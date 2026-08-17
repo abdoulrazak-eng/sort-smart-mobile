@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
+export type CameraHandle = { capture: () => string | null };
+
 type Props = {
-  onFrame: (dataUrl: string) => void;
+  onReady: (handle: CameraHandle | null) => void;
   labelCamera: string;
   labelTap: string;
   labelStarting: string;
   labelBlocked: string;
+  overlay?: React.ReactNode;
 };
-
-export type CameraHandle = { capture: () => string | null };
 
 export function CameraScanner({
   onReady,
@@ -17,14 +18,7 @@ export function CameraScanner({
   labelStarting,
   labelBlocked,
   overlay,
-}: {
-  onReady: (handle: CameraHandle | null) => void;
-  labelCamera: string;
-  labelTap: string;
-  labelStarting: string;
-  labelBlocked: string;
-  overlay?: React.ReactNode;
-} & Partial<Props>) {
+}: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
