@@ -412,6 +412,19 @@ function SmartEcoApp() {
               <h2 className="text-sm font-semibold text-card-foreground">📱 {t.installTitle}</h2>
               <p className="mt-1 text-xs text-muted-foreground">{t.installHint}</p>
             </section>
+
+            <section className="rounded-3xl border border-border bg-card p-4">
+              <h2 className="text-sm font-semibold text-card-foreground">🖥️ Big screen display</h2>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Open the full-screen kiosk layout on a TV or PC monitor.
+              </p>
+              <Link
+                to="/display"
+                className="mt-3 block w-full rounded-xl bg-secondary px-3 py-2.5 text-center text-xs font-semibold text-secondary-foreground"
+              >
+                Open display mode
+              </Link>
+            </section>
           </div>
         )}
       </main>
