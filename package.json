@@ -1,6 +1,7 @@
 {
   "name": "tanstack_start_ts",
   "private": true,
+  "main": "electron/main.cjs",
   "sideEffects": false,
   "type": "module",
   "scripts": {
@@ -9,7 +10,8 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "desktop": "electron ."
   },
   "dependencies": {
     "@capacitor/app": "^8.1.1",
